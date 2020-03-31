@@ -44,7 +44,7 @@ export class HousingPieChartComponent implements OnInit {
 
   ngOnInit() {
     
-    this.myService.getAbsherData().subscribe(data => {this.pieChartData = data['PieChart'][1],
+    this.myService.getHousingData().subscribe(data => {this.pieChartData = data['PieChart'][1],
       this.pieChartLabels = data['PieChart'][0] ,
     this.dataSource=data['Table']
     }
