@@ -36,7 +36,7 @@ export class EduPieChartComponent implements OnInit {
   
   public pieChartColors = [
     {
-      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+      backgroundColor: ['rgba(0,0,255,0.3)','rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)'],
     },
   ];
 

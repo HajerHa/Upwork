@@ -38,7 +38,7 @@ export class AbsherPieChartComponent implements OnInit {
   
   public pieChartColors = [
     {
-      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+      backgroundColor: ['rgba(0,0,255,0.3)','rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)'],
     },
   ];
 
@@ -49,7 +49,6 @@ export class AbsherPieChartComponent implements OnInit {
     this.myService.getAbsherData().subscribe(data => {this.pieChartData = data['PieChart'][1],
       this.pieChartLabels = data['PieChart'][0] ,
     this.dataSource=data['Table']
-    
     
     }
     )
