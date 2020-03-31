@@ -13,6 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HealthPieChartComponent } from './health-pie-chart/health-pie-chart.component';
 import { HousingPieChartComponent } from './housing-pie-chart/housing-pie-chart.component';
 import { EduPieChartComponent } from './edu-pie-chart/edu-pie-chart.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent }, 
@@ -40,7 +44,10 @@ const appRoutes: Routes = [
     ),
     HttpClientModule,
     ChartsModule,
+    MatGridListModule,
+    MatTableModule,
     MatButtonModule,
+    MatPaginatorModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
