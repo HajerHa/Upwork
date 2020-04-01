@@ -4,6 +4,8 @@ import { Label } from 'ng2-charts';
 import {ServiceService} from '../service.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import {ThemePalette} from '@angular/material/core';
+import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-health-pie-chart',
@@ -14,7 +16,8 @@ export class HealthPieChartComponent implements OnInit {
   displayedColumns: string[] = ['Text', 'WeekDay', 'Month', 'Day','Hour', 'Has_Hastag','Has_URL',
   'Fav_count', 'Is_Reply', 'Retweet_Count', 'Followers','Following','User','Screen_Name','In_ReplyTo_Screen_Name', 'Tweet_Hashtags', 'sentimentClass'];
   dataSource = new MatTableDataSource();
-
+  color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'indeterminate';
   
   public pieChartOptions: ChartOptions = {
     responsive: true,
@@ -47,7 +50,8 @@ export class HealthPieChartComponent implements OnInit {
     
     this.myService.gethealthData().subscribe(data => {this.pieChartData = data['PieChart'][1],
       this.pieChartLabels = data['PieChart'][0] ,
-    this.dataSource=data['Table']
+    this.dataSource=data['Table'],
+    this.mode = 'determinate'
     }
     )
   }

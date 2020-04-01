@@ -16,7 +16,7 @@ import { EduPieChartComponent } from './edu-pie-chart/edu-pie-chart.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent }, 
@@ -50,7 +50,8 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
